@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/btncon"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip"
+                android:background="@color/gray"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+                <Button
+                    android:id="@+id/back"
+                    android:layout_width="20.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2.0dip"
+                    android:background="@drawable/btn_back"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/prp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:text="项目动态"
+                android:textColor="@color/gray"
+                android:singleLine="true"
+                android:ellipsize="middle"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:focusableInTouchMode="true"
+                android:textSize="16.0sp" />
+        </RelativeLayout>
+
+        <!--<View-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="1dip"-->
+        <!--android:background="#000000" />-->
+    </LinearLayout>
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/body"-->
+    <!--android:orientation="vertical" >-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/homepage_body"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical" >-->
+    <!--&lt;!&ndash;android:background="@drawable/message_liet_bg"&ndash;&gt;-->
+
+    <!--&lt;!&ndash; 主题图片 &ndash;&gt;-->
+    <!--<news.awit.com.newsemc.activity.SlideShowView-->
+    <!--android:id="@+id/slideshowView"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="180dp"-->
+    <!--android:layout_centerHorizontal="true" />-->
+
+    <!--</LinearLayout>-->
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+    <!--<LinearLayout-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:orientation="vertical"-->
+    <!--android:gravity="center"-->
+    <!--android:id="@+id/body_linear">-->
+    <!--<RelativeLayout-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_width="wrap_content">-->
+    <!--<TextView-->
+    <!--android:id="@+id/textitle"-->
+    <!--android:layout_height="25sp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:text="图片新闻:"-->
+    <!--android:textSize="20sp"-->
+    <!--android:layout_marginTop="3dp"-->
+    <!--android:layout_marginBottom="3dp"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_gravity="center">-->
+
+    <!--</TextView>-->
+    <!--<TextView-->
+    <!--android:id="@+id/textcontent"-->
+    <!--android:layout_height="25sp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:text="西成公司组织召开..."-->
+    <!--android:textSize="15sp"-->
+    <!--android:layout_marginTop="3dp"-->
+    <!--android:layout_marginBottom="3dp"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_toRightOf="@+id/textitle">-->
+
+    <!--</TextView>-->
+    <!--</RelativeLayout>-->
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:src="@drawable/u6_line"-->
+    <!--android:layout_below="@+id/textitle"/>-->
+
+    <zrc.widget.ZrcListView
+        android:id="@+id/mainlistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:choiceMode="singleChoice"
+        android:dividerHeight="0dp"
+        android:drawSelectorOnTop="false"
+        android:layout_marginTop="0dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        />
+</LinearLayout>
+    <!--</RelativeLayout>-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->

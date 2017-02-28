@@ -1,0 +1,240 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/projectinteminfocontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical" >-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal" >-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/btncon"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="44.0dip"-->
+                    <!--android:background="@drawable/titlebac"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal" >-->
+                    <!--<Button-->
+                        <!--android:id="@+id/back"-->
+                        <!--android:layout_width="44.0dip"-->
+                        <!--android:layout_height="30.0dip"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginTop="2.0dip"-->
+                        <!--android:background="@drawable/back"-->
+                        <!--android:gravity="center"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:textSize="15sp" />-->
+                <!--</LinearLayout>-->
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/prp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="200dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_centerInParent="true"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="@string/constructinfo"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="#ffffffff"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:singleLine="true"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:ellipsize="middle"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:marqueeRepeatLimit="marquee_forever"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:focusableInTouchMode="true"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textSize="16.0sp" />&ndash;&gt;-->
+            <!--</RelativeLayout>-->
+
+            <!--&lt;!&ndash;<View&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="1dip"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="#000000" />&ndash;&gt;-->
+        <!--</LinearLayout>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+            <!--<ScrollView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
+            <FrameLayout
+                android:id="@+id/replace_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </FrameLayout>
+            <!--</ScrollView>-->
+
+
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:background="@drawable/tab_bg" >-->
+            <!--&lt;!&ndash;<Button&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/but1"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="征地拆迁"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="#82858b" />&ndash;&gt;-->
+            <!--&lt;!&ndash;<Button&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/but2"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="进度管理"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textColor="#82858b"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<Button&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/but3"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="技术资料"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textColor="#82858b"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<Button&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/but4"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="质安风险"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textColor="#82858b"/>&ndash;&gt;-->
+
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/qualityinfo_layout"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1.5"-->
+                <!--android:clickable="true"-->
+                <!--android:focusable="true"-->
+                <!--android:focusableInTouchMode="true"-->
+                <!-->-->
+                <!--&lt;!&ndash;android:background="@drawable/buttonchangecolor"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:clickable="true"&ndash;&gt;-->
+
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:orientation="vertical">-->
+
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/qualityinfo_image"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_horizontal" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/qualityinfo_text"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:text="征地拆迁"-->
+                        <!--android:textColor="#82858b" />-->
+                <!--</LinearLayout>-->
+            <!--</RelativeLayout>-->
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/projectinfo_layout"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1.5"-->
+                <!-->-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:orientation="vertical" >-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/projectinfo_image"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_horizontal" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/projectinfo_text"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:text="进度管理"-->
+                        <!--android:textColor="#82858b" />-->
+                <!--</LinearLayout>-->
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/workinfo_layout"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1.5" >-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:orientation="vertical" >-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/workinfo_image"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_horizontal" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/workinfo_text"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:text="技术资料"-->
+                        <!--android:textColor="#82858b" />-->
+                <!--</LinearLayout>-->
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/studyinfo_layout"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1.5" >-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:orientation="vertical" >-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/studyinfo_image"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_horizontal" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/studyinfo_text"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:text="质安风险"-->
+                        <!--android:textColor="#82858b" />-->
+                <!--</LinearLayout>-->
+            <!--</RelativeLayout>-->
+
+        <!--</LinearLayout>-->
+    </LinearLayout>
+
+</LinearLayout>

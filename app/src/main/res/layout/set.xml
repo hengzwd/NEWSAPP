@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F00F000"
+    android:gravity="right"
+    android:orientation="vertical" >
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+    android:text="注销登录"/>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#66000000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:text="更新"/>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#66000000"/>
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent" >-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/homepage_tittlebar"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="44.0dip"-->
+            <!--android:background="?attr/title"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingLeft="10.0dip"-->
+            <!--android:paddingRight="10.0dip" >-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="fill_parent"-->
+                <!--android:gravity="center_vertical" >-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/back_button"-->
+                    <!--android:layout_width="44.0dip"-->
+                    <!--android:layout_height="30.0dp"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginTop="2.0dip"-->
+                    <!--android:background="?attr/inout_back_selecter"-->
+                    <!--android:gravity="center"-->
+                    <!--android:paddingLeft="5dp"-->
+                    <!--android:paddingRight="0dp"-->
+                    <!--android:text="返回"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:textSize="15sp" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginTop="2.0dip"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:padding="3.0dip" >-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/projectname"-->
+                        <!--android:layout_width="0dip"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:adjustViewBounds="true"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="系统设置"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:textSize="22.0sp" />-->
+                <!--</LinearLayout>-->
+            <!--</RelativeLayout>-->
+        <!--</LinearLayout>-->
+
+        <!--<ScrollView-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:layout_below="@id/homepage_tittlebar"-->
+            <!--android:scrollbars="vertical" >-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical" >-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:background="?attr/banner" >-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:text="账户管理"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:textSize="15sp" >-->
+                    <!--</TextView>-->
+                <!--</LinearLayout>-->
+
+                <!--<View-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="1dip"-->
+                    <!--android:background="#dcdcdc" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/usercancel"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="@drawable/item_press_button" >-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginTop="12dp"-->
+                        <!--android:text="注销登录"-->
+                        <!--android:textSize="20sp" >-->
+                    <!--</TextView>-->
+                <!--</LinearLayout>-->
+
+                <!--<View-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="1dip"-->
+                    <!--android:background="#dcdcdc" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/userchange"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="@drawable/item_press_button"-->
+                    <!--android:visibility="gone" >-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginTop="12dp"-->
+                        <!--android:text="切换用户"-->
+                        <!--android:textSize="20sp" >-->
+                    <!--</TextView>-->
+                <!--</LinearLayout>-->
+
+                <!--<View-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="1dip"-->
+                    <!--android:background="#dcdcdc" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:background="?attr/banner" >-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:text="系统设置"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:textSize="15sp" >-->
+                    <!--</TextView>-->
+                <!--</LinearLayout>-->
+
+                <!--<View-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="1dip"-->
+                    <!--android:background="#000000" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/checkUpdateForOpen"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="@drawable/item_press_button" >-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginTop="12dp"-->
+                        <!--android:text="启动时检查更新"-->
+                        <!--android:textSize="20sp" >-->
+                    <!--</TextView>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/checkstatus"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginTop="12dp"-->
+                        <!--android:text=""-->
+                        <!--android:textSize="18sp" >-->
+                    <!--</TextView>-->
+                <!--</LinearLayout>-->
+
+                <!--<View-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="1dip"-->
+                    <!--android:background="#dcdcdc" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/cleancache"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="70dp"-->
+                    <!--android:background="@drawable/item_press_button"-->
+                    <!--android:orientation="vertical" >-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginTop="12dp"-->
+                        <!--android:text="清理缓存"-->
+                        <!--android:textSize="20sp" >-->
+                    <!--</TextView>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/cache"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:text="0.0B"-->
+                        <!--android:textSize="18sp" >-->
+                    <!--</TextView>-->
+                <!--</LinearLayout>-->
+
+                <!--<View-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="1dip"-->
+                    <!--android:background="#dcdcdc" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/checkUpdateNow"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="@drawable/item_press_button" >-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginTop="12dp"-->
+                        <!--android:text="立即检查更新"-->
+                        <!--android:textSize="20sp" >-->
+                    <!--</TextView>-->
+                <!--</LinearLayout>-->
+
+                <!--<View-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="1dip"-->
+                    <!--android:background="#dcdcdc" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/settheam"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="@drawable/item_press_button" >-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginTop="12dp"-->
+                        <!--android:text="设置主题"-->
+                        <!--android:textSize="20sp" >-->
+                    <!--</TextView>-->
+                <!--</LinearLayout>-->
+
+                <!--<View-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="1dip"-->
+                    <!--android:background="#dcdcdc" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/draftbox"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="@drawable/item_press_button" >-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginTop="12dp"-->
+                        <!--android:text="草稿箱"-->
+                        <!--android:textSize="20sp" >-->
+                    <!--</TextView>-->
+                <!--</LinearLayout>-->
+
+                <!--<View-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="1dip"-->
+                    <!--android:background="#dcdcdc" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/pdffile"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="@drawable/item_press_button" >-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginTop="12dp"-->
+                        <!--android:text="已下载PDF文件"-->
+                        <!--android:textSize="20sp" >-->
+                    <!--</TextView>-->
+                <!--</LinearLayout>-->
+
+                <!--<View-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="1dip"-->
+                    <!--android:background="#dcdcdc" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/updatexmlpath"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="@drawable/item_press_button" >-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginTop="12dp"-->
+                        <!--android:text="修改xml路径"-->
+                        <!--android:textSize="20sp" >-->
+                    <!--</TextView>-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:background="?attr/banner" >-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:text="联系我们"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:textSize="15sp" >-->
+                    <!--</TextView>-->
+                <!--</LinearLayout>-->
+
+                <!--<View-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="1dip"-->
+                    <!--android:background="#000000" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/suggestion"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="@drawable/item_press_button" >-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginTop="12dp"-->
+                        <!--android:text="意见反馈"-->
+                        <!--android:textSize="20sp" >-->
+                    <!--</TextView>-->
+                <!--</LinearLayout>-->
+
+                <!--<View-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="1dip"-->
+                    <!--android:background="#dcdcdc" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/commuction"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="@drawable/item_press_button"-->
+                    <!--android:orientation="vertical" >-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginTop="12dp"-->
+                        <!--android:text="联系方式"-->
+                        <!--android:textSize="20sp" >-->
+                    <!--</TextView>-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+        <!--</ScrollView>-->
+    <!--</RelativeLayout>-->
+
+</LinearLayout>

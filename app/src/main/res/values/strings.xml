@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">铁路工程管理平台</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="system">系统设置</string>
+    <string name="projectinfo">公司信息</string>
+    <string name="companynews">公司要闻</string>
+    <string name="constructinfo">项目动态</string>
+    <string name="createinfo">创先争优</string>
+    <string name="mieninfo">建设风采</string>
+    <string name="quanlu">全路风采</string>
+    <string name="gongsi">公司风采</string>
+    <string name="settings">系统设置</string>
+    <string name="checkupdate">检查更新</string>
+    <string name="aboutus">关于我们</string>
+    <string name="useradvice">用户反馈</string>
+    <string name="erweima">关注平台</string>
+    <string name="exit">退出</string>
+    <string name="loading">加载中..</string>
+    <string name="title_activity_listener">ListenerActivity</string>
+    <string name="title_activity_auto_connect">AutoConnectActivity</string>
+    <string name="title_activity_device_list">DeviceListActivity</string>
+    <string name="title_activity_terminal">TerminalActivity</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_sure">确定</string>
+
+    <string name="drawer_open">打开</string>
+    <string name="drawer_close">关闭</string>
+    <string name="copyright">中国铁路总公司</string>
+    <string name="remmm">记住密码</string>
+    <string name="autologin">自动登录</string>
+
+    <!-- ADD BY 祝鹏辉 BEGIN -->
+    <string name="ci">次</string>
+    <string name="file_in_downloading">文件下载中...</string>
+    <string name="file_downloading_failure">文件下载失败！</string>
+    <string name="file_downloading_success">文件下载成功！</string>
+    <!-- ADD BY 祝鹏辉 END -->
+
+    <!--项目信息-->
+    <string name="project_info_title">项目信息</string>
+    <string name="title_activity_single_new">SingleNewActivity</string>
+
+    <!--扫描-->
+    <string name="bridge">桥梁</string>
+
+    <string name="kaiwajindu">开挖及支护</string>
+
+    <string name="yanggong">仰拱</string>
+    <string name="erchun">二衬</string>
+
+</resources>

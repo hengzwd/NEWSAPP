@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <!--&lt;!&ndash;// 新闻标题 &ndash;&gt;-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="100dp"-->
+    <!--android:orientation="vertical">-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_weight="1">-->
+    <!--<TextView-->
+    <!--android:id="@+id/title"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_margin="5dp"-->
+    <!--android:paddingTop="8dp"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:textSize="20sp"-->
+    <!--android:textColor="@color/back"-->
+    <!--android:fontFamily="sans-serif"-->
+    <!--android:text="加载中……"/>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginBottom="5dp"-->
+        <!--android:layout_weight="1">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/unit"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:textColor="@color/darkgray"-->
+            <!--android:textSize="15dp"-->
+            <!--android:text="中心工作室"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/time"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColor="@color/darkgray"-->
+            <!--android:text="05-08"/>-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:src="@drawable/read"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/read"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColor="@color/darkgray"-->
+            <!--android:text="29次"-->
+            <!--/>-->
+    <!--</LinearLayout>-->
+        <WebView
+            android:id="@+id/webview_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:focusable="true"
+            android:layout_gravity="center"
+            android:requiresFadingEdge="horizontal"
+            >
+        </WebView>
+<!--</LinearLayout>-->
+</LinearLayout>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/general_grey_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/login_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:text="@string/app_name"
+            android:textSize="24sp"
+            android:textColor="@color/darkgray"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/login1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/namelayout"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="30.0dip"
+            android:layout_marginTop="30.0dip"
+            android:background="@drawable/top" >
+
+            <ImageView
+                android:id="@+id/imageuser"
+                android:layout_width="42.0dip"
+                android:layout_height="34.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16.0dip"
+                android:src="@drawable/login_icon1" />
+
+            <TextView
+                android:id="@+id/cell_title"
+                android:layout_width="16.0dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/imageuser"
+                android:singleLine="true"
+                android:text="  "
+                android:textColor="@color/regist_font"
+                android:textSize="16.0sp" />
+
+            <EditText
+                android:id="@+id/nameinput"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/cell_title"
+                android:background="@null"
+                android:textCursorDrawable="@null"
+                android:hint="请输入用户名"
+                android:singleLine="true"
+                android:textSize="13.0sp"
+                android:text="">
+
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/passlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="30.0dip"
+            android:background="@drawable/foot">
+
+            <ImageView
+                android:id="@+id/imagepass"
+                android:layout_width="42.0dip"
+                android:layout_height="34.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15.0dip"
+                android:src="@drawable/login_icon2" />
+
+            <TextView
+                android:id="@+id/cell_title_psw"
+                android:layout_width="16.0dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="9.0dip"
+                android:layout_toRightOf="@id/imagepass"
+                android:singleLine="true"
+                android:text="  "
+                android:textColor="@color/regist_font"
+                android:textSize="16.0sp" />
+
+            <EditText
+                android:id="@+id/passinput"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/cell_title_psw"
+                android:background="@null"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@null"
+                android:singleLine="true"
+                android:textSize="13.0sp"
+                />
+        </RelativeLayout>
+
+        <!-- 根据京沈需求不需要显示imei-->
+        <RelativeLayout
+            android:id="@+id/imeilayout"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:visibility="gone"
+            android:background="@drawable/foot"
+            >
+
+            <ImageView
+                android:id="@+id/imeipass"
+                android:layout_width="42.0dip"
+                android:layout_height="34.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15.0dip"
+                android:src="@drawable/lock" />
+
+            <TextView
+                android:id="@+id/cell_title_imei"
+                android:layout_width="66.0dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="9.0dip"
+                android:layout_toRightOf="@id/imeipass"
+                android:singleLine="true"
+                android:text="IMEI号："
+                android:textColor="@color/regist_font"
+                android:textSize="16.0sp" />
+
+            <EditText
+                android:id="@+id/imeiinput"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/cell_title_imei"
+                android:textCursorDrawable="@null"
+                android:background="@null"
+                android:hint="请输入IMEI号"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:focusable="false"
+                android:textSize="13.0sp"
+                android:editable="false"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/desrc"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="30.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_below="@+id/imeilayout">
+            <TextView
+                android:id="@+id/decripe"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dip"
+                android:text="该用户第一次登录,绑定imei以后，只能本机登录;若想换机器，请先解绑"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <CheckBox
+                android:id="@+id/remember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remmm"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                />
+
+            <CheckBox
+                android:id="@+id/autologin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/autologin"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="10dp"
+                />
+
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/login"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="30.0dip"
+            android:layout_marginTop="20.0dip"
+            android:background="@drawable/loginbtn_selector"
+            android:text="登    录"
+            android:textColor="@color/white" />
+
+        <!--<RelativeLayout-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="15.0dip"-->
+        <!--android:layout_marginRight="15.0dip"-->
+        <!--android:layout_marginTop="14.0dip" >-->
+        <!--<TextView-->
+        <!--android:id="@+id/login_forget_pass"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:background="@null"-->
+        <!--android:paddingBottom="3.0dip"-->
+        <!--android:text="记住密码"-->
+        <!--android:visibility="invisible"-->
+        <!--android:textColor="#ff546474" />-->
+
+        <!--<CheckBox-->
+        <!--android:id="@+id/ckeckpass"-->
+        <!--android:layout_toLeftOf="@id/login_forget_pass"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:visibility="invisible"-->
+        <!--android:layout_height="wrap_content"/>-->
+        <!--</RelativeLayout>-->
+        <!-- 根据京沈需求文档，暂时不需要特殊登陆功能 -->
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/testrelay"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:layout_marginRight="10.0dip"-->
+        <!--android:layout_marginTop="20dip">-->
+        <!--<TextView-->
+        <!--android:id="@+id/testlogin"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="学习版登录"-->
+        <!--android:textColor="@color/green"/>-->
+
+        <!--</RelativeLayout>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_down"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="bottom"
+        android:layout_weight="0.1"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:orientation="vertical">
+        <!-- CopyRight信息 -->
+        <TextView
+            android:id="@+id/txtCopyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:text="@string/copyright" />
+    </LinearLayout>
+
+
+</LinearLayout>

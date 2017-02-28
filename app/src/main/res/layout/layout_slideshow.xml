@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/descLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/slider_text_bg"
+        android:layout_above="@+id/dotLayout">
+        <TextView
+            android:id="@+id/textcontent1"
+            android:layout_height="20sp"
+            android:layout_width="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:layout_marginBottom="3dp"
+            android:gravity="left"
+            android:textColor="@color/white"
+            />
+        <!--android:background="#e0000000"-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dotLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/slider_text_bg"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/v_dot1"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/dot_focus" />
+
+        <View
+            android:id="@+id/v_dot2"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/dot_blur" />
+
+    </LinearLayout>
+</RelativeLayout>  

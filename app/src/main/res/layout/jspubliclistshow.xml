@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--<TextView-->
+        <!--android:id="@+id/no"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:text="我是你孙爷爷"-->
+        <!--android:textSize="14dp">-->
+
+    <!--</TextView>-->
+    <zrc.widget.ZrcListView
+        android:id="@+id/publiclistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:drawSelectorOnTop="false"
+        android:layout_marginTop="0dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll">
+    </zrc.widget.ZrcListView>
+</LinearLayout>

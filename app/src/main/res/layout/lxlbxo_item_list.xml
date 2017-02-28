@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        android:background="#B8B8B8"
+        android:visibility="visible" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:layout_width="0.5px"
+            android:layout_height="match_parent"
+            android:background="#B8B8B8"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/num"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:text="序号"/>
+        <View
+            android:id="@+id/line_horizontal"
+            android:layout_width="0.5px"
+            android:layout_height="match_parent"
+            android:background="#B8B8B8"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/projectname"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="标段\n/工点"/>
+        <View
+            android:id="@+id/line_horizontal1"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#B8B8B8"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="里程"/>
+        <View
+            android:id="@+id/line_horizontal2"
+            android:layout_width="0.5px"
+            android:layout_height="match_parent"
+            android:background="#B8B8B8"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/sum"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:text="测点"/>
+        <View
+            android:id="@+id/line_horizontal3"
+            android:layout_width="0.5px"
+            android:layout_height="match_parent"
+            android:background="#B8B8B8"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/sheji"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:text="施工阶段"/>
+        <View
+            android:id="@+id/line_horizontal4"
+            android:layout_width="0.5px"
+            android:layout_height="match_parent"
+            android:background="#B8B8B8"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/shigong"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:text="超限信息"/>
+        <View
+            android:id="@+id/line_horizontal5"
+            android:layout_width="0.5px"
+            android:layout_height="match_parent"
+            android:background="#B8B8B8"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/jianliperson"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:text="施工负责\n人"/>
+        <View
+            android:id="@+id/line_horizontal6"
+            android:layout_width="0.5px"
+            android:layout_height="match_parent"
+            android:background="#B8B8B8"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/leader"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:text="主管领导"/>
+        <View
+            android:id="@+id/line_horizontal7"
+            android:layout_width="0.5px"
+            android:layout_height="match_parent"
+            android:background="#B8B8B8"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/procedure"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:text="流程完成"/>
+        <View
+            android:id="@+id/line_horizontal8"
+            android:layout_width="0.5px"
+            android:layout_height="match_parent"
+            android:background="#B8B8B8"
+            android:visibility="visible" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        android:background="#B8B8B8"
+        android:visibility="visible" />
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="vertical" >
+
+    <GridView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gridview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:numColumns="2"
+    android:horizontalSpacing="0dip"
+    android:verticalSpacing="0dip"
+    android:stretchMode="columnWidth"
+    android:gravity="center">
+
+    </GridView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <!--<com.jpardogo.listbuddies.lib.views.ListBuddiesLayout-->
+        <!--xmlns:listbuddies="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/listbuddies"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--listbuddies:speed="0"-->
+        <!--listbuddies:gap="@dimen/gap"-->
+        <!--listbuddies:gapColor="@color/frame"-->
+        <!--listbuddies:listsDividerHeight="@dimen/divider_height"-->
+        <!--listbuddies:autoScrollFaster="right"-->
+        <!--listbuddies:scrollFaster="left"/>-->
+</LinearLayout>

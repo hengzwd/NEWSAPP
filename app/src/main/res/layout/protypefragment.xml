@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:background="@color/activity_bg" >
+    <!--<TextView-->
+        <!--android:id="@+id/toptype"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:textSize="12sp"-->
+        <!--android:layout_margin="15dp"-->
+        <!--/>-->
+
+    <!--<GridView-->
+        <!--android:id="@+id/listView"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:numColumns="3"-->
+        <!--android:horizontalSpacing="10dp"-->
+        <!--android:verticalSpacing="10dp"-->
+        <!--android:layout_below="@id/toptype"-->
+        <!--android:scrollbars="none"-->
+        <!--/>-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/hint_img"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="60dp"-->
+        <!--android:contentDescription="@null"-->
+        <!--android:scaleType="centerInside"-->
+        <!--android:visibility="gone" />-->
+
+    <!--<ProgressBar-->
+        <!--android:id="@+id/progressBar"-->
+        <!--style="@android:style/Widget.ProgressBar.Small"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:visibility="visible" />-->
+    <ListView
+        android:id="@+id/typelistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:choiceMode="singleChoice"
+        android:layout_weight="3">
+        <!--android:divider="@android:color/transparent"-->
+        <!--android:dividerHeight="0dp"-->
+        <!--android:drawSelectorOnTop="false"-->
+        <!--android:layout_marginTop="3dp"-->
+        <!--android:stackFromBottom="true"-->
+        <!--android:transcriptMode="alwaysScroll"-->
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/productlinear"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <!--<ListView-->
+            <!--android:id="@+id/productlistview"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:choiceMode="singleChoice"-->
+            <!--android:divider="@android:color/transparent"-->
+            <!--android:dividerHeight="0dp"-->
+            <!--android:drawSelectorOnTop="false"-->
+            <!--android:layout_marginTop="3dp"-->
+            <!--android:stackFromBottom="true"-->
+            <!--android:transcriptMode="alwaysScroll">-->
+        <!--</ListView>-->
+    </LinearLayout>
+</LinearLayout>

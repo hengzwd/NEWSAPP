@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/but1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择项目"/>
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/projects"/>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#B8B8B8"
+        android:visibility="visible" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        android:layout_marginTop="10dp"
+        android:background="#B8B8B8"
+        android:visibility="visible" />
+    <HorizontalScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:scrollbarAlwaysDrawHorizontalTrack="false">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="0.5px"
+                    android:layout_height="match_parent"
+                    android:background="#B8B8B8"
+                    android:visibility="visible" />
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="桥梁名称"
+                    android:textSize="15sp"/>
+                <View
+                    android:layout_width="0.5px"
+                    android:layout_height="match_parent"
+                    android:background="#B8B8B8"
+                    android:visibility="visible" />
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="设计数\n量类型"
+                    android:textSize="15sp"/>
+                <View
+                    android:layout_width="0.5px"
+                    android:layout_height="match_parent"
+                    android:background="#B8B8B8"
+                    android:visibility="visible" />
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="设计总量"
+                    android:textSize="15sp"/>
+                <View
+                    android:layout_width="0.5px"
+                    android:layout_height="match_parent"
+                    android:background="#B8B8B8"
+                    android:visibility="visible" />
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="日完成量"
+                    android:textSize="15sp"/>
+                <View
+                    android:layout_width="0.5px"
+                    android:layout_height="match_parent"
+                    android:background="#B8B8B8"
+                    android:visibility="visible" />
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="月累"
+                    android:textSize="15sp"/>
+                <View
+                    android:layout_width="0.5px"
+                    android:layout_height="match_parent"
+                    android:background="#B8B8B8"
+                    android:visibility="visible" />
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="开累"
+                    android:textSize="15sp"/>
+                <View
+                    android:layout_width="0.5px"
+                    android:layout_height="match_parent"
+                    android:background="#B8B8B8"
+                    android:visibility="visible" />
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="开累完\n成率"
+                    android:textSize="15sp"/>
+                <View
+                    android:layout_width="0.5px"
+                    android:layout_height="match_parent"
+                    android:background="#B8B8B8"
+                    android:visibility="visible" />
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="计划完\n成日"
+                    android:textSize="15sp"/>
+                <View
+                    android:layout_width="0.5px"
+                    android:layout_height="match_parent"
+                    android:background="#B8B8B8"
+                    android:visibility="visible" />
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="滞后工\n作量"
+                    android:textSize="15sp"/>
+                <View
+                    android:layout_width="0.5px"
+                    android:layout_height="match_parent"
+                    android:background="#B8B8B8"
+                    android:visibility="visible" />
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="滞后工\n期(天)"
+                    android:textSize="15sp"/>
+                <View
+                    android:layout_width="0.5px"
+                    android:layout_height="match_parent"
+                    android:background="#B8B8B8"
+                    android:visibility="visible" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5px"
+                android:background="#B8B8B8"
+                android:visibility="visible"/>
+            <zrc.widget.ZrcListView
+                android:id="@+id/jindu_tab_lv"
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </HorizontalScrollView>
+</LinearLayout>
