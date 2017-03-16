@@ -25,6 +25,7 @@ import org.dom4j.DocumentFactory;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
+import org.json.JSONObject;
 
 
 import java.io.BufferedReader;
@@ -32,6 +33,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -76,6 +78,8 @@ public class LoginActivity extends Activity implements HttpResultListener{
     private static String ssid;
     private static String userAccount;
     private static String relateAccount ;
+    private List<JSONObject> switchers;
+
     private static String idcard;
     private static String compid;
     private String firststa="5";//成功登录的状态码
@@ -394,6 +398,8 @@ public class LoginActivity extends Activity implements HttpResultListener{
                                 bundle.putString("f_userId",f_userId);
                                 bundle.putString("ssid",name);
                                 bundle.putString("relateAccount",relateAccount);
+                                bundle.putSerializable("switchers", (Serializable) switchers);
+
                                 Log.i(TAG,"f_userId===="+f_userId);
                                 Intent intent = new Intent(LoginActivity.this,
                                         MainActivity.class);

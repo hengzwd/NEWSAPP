@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.os.Parcelable;
 import android.os.Process;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
@@ -35,12 +36,14 @@ import org.dom4j.DocumentFactory;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -53,6 +56,7 @@ import newsemc.com.awit.news.newsemcapp.bean.UserLogin;
 import newsemc.com.awit.news.newsemcapp.dao.ApkUpdateInfo;
 import newsemc.com.awit.news.newsemcapp.dao.CompanyLogoInfo;
 import newsemc.com.awit.news.newsemcapp.dao.DepartmentInfo;
+import newsemc.com.awit.news.newsemcapp.dao.PersonInfo;
 import newsemc.com.awit.news.newsemcapp.dialog.CustomProgressDialog;
 import newsemc.com.awit.news.newsemcapp.interfaceImpl.ApkDetailImpl;
 import newsemc.com.awit.news.newsemcapp.interfaceImpl.UserLoginImpl;
@@ -97,6 +101,8 @@ public class LoginActivity1 extends Activity implements HttpResultListener {
     private static String relateAccount;
     private static String idcard;
     private static String compid;
+
+    private List<JSONObject> switchers;
     private String firststa = "5";//成功登录的状态码
     private String status;
     private String successsta = "10", exceptionsta = "10", loginsta = "10", exsta = "10";
@@ -240,7 +246,7 @@ public class LoginActivity1 extends Activity implements HttpResultListener {
 
         update();
 
-        Log.i("oncreate","update");
+        Log.i("oncreate", "update");
         //判断记住密码多选框的状态
         if (sp.getBoolean("ISCHECK", false) && !"success".equals(getIntent().getStringExtra("unbding")) && !"pwderror".equals(getIntent().getStringExtra("pwderror"))) {
             //设置默认是记录密码状态
@@ -291,7 +297,6 @@ public class LoginActivity1 extends Activity implements HttpResultListener {
             }
         });
     }
-
 
 
     private void initview() {
@@ -375,7 +380,7 @@ public class LoginActivity1 extends Activity implements HttpResultListener {
             public void onSuccess(String response) {
                 KLog.json(response);
                 LoginUserBean data = new Gson().fromJson(response, LoginUserBean.class);
-                if (null != data && 0==data.getResult()) {
+                if (null != data && 0 == data.getResult()) {
 
                     NewsEMCAppllication.mToken = data.getToken();
                     if (!TextUtils.isEmpty(NewsEMCAppllication.mToken)) {
@@ -409,7 +414,7 @@ public class LoginActivity1 extends Activity implements HttpResultListener {
 
         @Override
         public void onStartRequest() {
-            if (index!=9) {  //更新检测网络请求
+            if (index != 9) {  //更新检测网络请求
                 startProgressDialog("正在加载……");
             }
         }
@@ -485,11 +490,13 @@ public class LoginActivity1 extends Activity implements HttpResultListener {
                                 bundle.putString("name", name);
                                 bundle.putString("duty", duty);
                                 bundle.putString("contact", contact);
-                                bundle.putString("relateAccount",relateAccount);
+                                bundle.putString("relateAccount", relateAccount);
                                 bundle.putString("compname", compname);
+                                NewsEMCAppllication.switchers= userLogin.getPersonInfobj().getSwitchers();
+                            //    bundle.putSerializable("PersonInfo",personInfo );
                                 bundle.putString("f_userId", f_userId);
 //                                bundle.putStringArrayList("list",((UserLogin) obj).getPersonInfobj().getAccountlist());
-                                bundle.putString("ssid",name);
+                                bundle.putString("ssid", name);
                                 Log.e(TAG, "f_userId====" + f_userId);
                                 Intent intent = new Intent(LoginActivity1.this,
                                         MainActivity.class);
@@ -497,8 +504,8 @@ public class LoginActivity1 extends Activity implements HttpResultListener {
                                 intent.putExtra("compid", compid);
                                 intent.putExtra("ssidd", name);
                                 startActivity(intent);
-
                                 finish();
+                                KLog.e("finish");
                                 //登录成功后,当上次登录成功的用户名跟本次登录的用户名不相同的情况下，清楚缓存
                                 if (!namestr.equals(userAccount)) {
                                     Log.i("更换用户名了呀", "ohohohoh");
@@ -847,7 +854,7 @@ public class LoginActivity1 extends Activity implements HttpResultListener {
                                         public void onClick(
                                                 DialogInterface arg0, int arg1) {
                                             arg0.dismiss();
-                                           // System.exit(0);
+                                            // System.exit(0);
                                             Process.killProcess(Process.myPid());
                                         }
                                     }).show();
@@ -879,7 +886,6 @@ public class LoginActivity1 extends Activity implements HttpResultListener {
         }
         return verCode;
     }
-
 
 
     /**
@@ -919,14 +925,13 @@ public class LoginActivity1 extends Activity implements HttpResultListener {
     }
 
 
-
     //根据apk接口返回url下载apk
     class getDownloadAddrHttpResultListener1 implements HttpResultListener {
 
         @Override
         public void onStartRequest() {
             // TODO Auto-generated method stub
-           // startProgressDialog("正在下载应用……");
+            // startProgressDialog("正在下载应用……");
         }
 
         @Override

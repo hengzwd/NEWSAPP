@@ -27,7 +27,7 @@ public class ValueConfig {
 //    public static final String PCAPP_URL = "http://www.r93535.com/gateway/";   //京沈
     public static final String PCAPP_URL = "http://www.r93535.com/gateway/";   //京沈
 //    public static final String PCAPP_URL = "http://10.30.1.18:8070/gateway/";//开发环境
-//    public static final String PCAPP_URL = "http://88.1.1.17:8080/gateway/";//测试版
+  //  public static final String PCAPP_URL = "http://88.1.1.17:8080/gateway/";//测试版
 //    public static final String PCAPP_URL = "http://www.r93535.com/gatewaytest/";   //京沈测试
 //    public static final String PCAPP_URL = "http://www.r93535.com/chuannan/";   //川南
     public static final String APPSERVICE_URL = "http://10.1.0.100/ws/";

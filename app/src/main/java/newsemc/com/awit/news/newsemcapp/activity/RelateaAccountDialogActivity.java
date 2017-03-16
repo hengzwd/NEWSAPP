@@ -20,12 +20,17 @@ import com.android.volley.VolleyError;
 import com.google.gson.Gson;
 import com.socks.library.KLog;
 
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 import newsemc.com.awit.news.newsemcapp.R;
 import newsemc.com.awit.news.newsemcapp.adapter.RelateaAccountAdapter;
+import newsemc.com.awit.news.newsemcapp.application.NewsEMCAppllication;
 import newsemc.com.awit.news.newsemcapp.bean.RelateaAccountLoginBean;
+import newsemc.com.awit.news.newsemcapp.dao.PersonInfo;
 import newsemc.com.awit.news.newsemcapp.scanmodule.utils.HttpUtils;
 import newsemc.com.awit.news.newsemcapp.scanmodule.utils.StringUtils;
 import newsemc.com.awit.news.newsemcapp.service.CompanyInfoService;
@@ -44,8 +49,11 @@ public class RelateaAccountDialogActivity extends Activity {
     private RecyclerView recycleview;
     private FrameLayout mfragment;
     private String ssid;
-    private List<String> list;
+    private List<String> list = new ArrayList<String>();
     private String relateAccounts;
+
+    private PersonInfo personInfo;
+
     private RelateaAccountAdapter madapter;
     private AlertDialog.Builder builder;
     private HashMap map = new HashMap();
@@ -77,10 +85,10 @@ public class RelateaAccountDialogActivity extends Activity {
     private void initview() {
         recycleview = (RecyclerView) findViewById(R.id.rcl_relateaaccount);
         mfragment = (FrameLayout) findViewById(R.id.fl_container_relateaAccountDialog_activity);
-        imageCancle= (ImageView) findViewById(R.id.imgv_cancle);
-        tv_noaccount= (TextView) findViewById(R.id.tv_noaccount);
-        tv_select= (TextView) findViewById(R.id.tv_select_reoateaaccount_activity);
-        btn_cancle= (Button) findViewById(R.id.btn_cancel);
+        imageCancle = (ImageView) findViewById(R.id.imgv_cancle);
+        tv_noaccount = (TextView) findViewById(R.id.tv_noaccount);
+        tv_select = (TextView) findViewById(R.id.tv_select_reoateaaccount_activity);
+        btn_cancle = (Button) findViewById(R.id.btn_cancel);
         btn_cancle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,8 +123,11 @@ public class RelateaAccountDialogActivity extends Activity {
         final Bundle bundle = intent.getExtras();
         layoutInflater = getLayoutInflater();
         relateAccounts = (String) bundle.get("relateAccount");
-        list = StringUtils.stringsToList(relateAccounts);
-        if (list.size()==0||list.get(0).equals("")) {
+        // list = StringUtils.stringsToList(relateAccounts);
+        for (int i = 0; i < NewsEMCAppllication.switchers.size(); i++) {
+            list.add(NewsEMCAppllication.switchers.get(i).getDeptname());
+        }
+        if (NewsEMCAppllication.switchers.size() == 0 || NewsEMCAppllication.switchers.get(0).equals("")) {
             recycleview.setVisibility(View.GONE);
 //            tv_select.setVisibility(View.GONE);
             tv_noaccount.setVisibility(View.VISIBLE);
@@ -133,11 +144,11 @@ public class RelateaAccountDialogActivity extends Activity {
             public void onclick(final int position, String s) {
                 builder = new AlertDialog.Builder(RelateaAccountDialogActivity.this);
                 builder.setTitle("切换账号")
-                        .setMessage("确认切换至账号：" + list.get(position))
+                        .setMessage("确认切换至：" + NewsEMCAppllication.switchers.get(position).getDeptname())
                         .setPositiveButton("确认", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                map.put("account", list.get(position));
+                                map.put("account", NewsEMCAppllication.switchers.get(position).getAccount());
                                 HttpUtils.postRequest(ValueConfig.PCAPP_URL + "user/login!switchAccount.action", map, new HttpUtils.HttpListener() {
                                     @Override
                                     public void onSuccess(String response) {
@@ -158,6 +169,8 @@ public class RelateaAccountDialogActivity extends Activity {
                                                 itent.putExtras(bundle1);
                                                 itent.putExtra("compid", data.getData().getList().get(0).getCompid());
                                                 itent.putExtra("ssidd", data.getData().getList().get(0).getSsid());
+
+                                                NewsEMCAppllication.switchers=data.getData().getList().get(0).getSwitchers();
                                                 RelateaAccountDialogActivity.this.setResult(1);
                                                 startActivity(itent);
 
@@ -173,7 +186,7 @@ public class RelateaAccountDialogActivity extends Activity {
                                                 editor.putString("KEY", key);
                                                 editor.putString("ACCOUNT", data.getData().getList().get(0).getAccount());
                                                 editor.commit();
-                                                Toast.makeText(getApplicationContext(), "切换账号至"+ data.getData().getList().get(0).getAccount(), Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(getApplicationContext(), "切换账号至" + list.get(position), Toast.LENGTH_SHORT).show();
                                                 finish();
                                             } else {
                                                 Toast.makeText(getApplicationContext(), "切换账号失败", Toast.LENGTH_SHORT).show();
@@ -186,7 +199,7 @@ public class RelateaAccountDialogActivity extends Activity {
                                     public void onFailed(VolleyError error) {
                                         KLog.e(TAG, error.toString());
                                         Toast.makeText(getApplicationContext(), "切换账号失败", Toast.LENGTH_SHORT).show();
-                                         finish();
+                                        finish();
                                     }
                                 });
                             }

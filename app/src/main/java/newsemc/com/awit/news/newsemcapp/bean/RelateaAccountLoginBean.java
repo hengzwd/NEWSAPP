@@ -11,7 +11,7 @@ public class RelateaAccountLoginBean {
 
 
     /**
-     * data : {"list":[{"account":"shjnadd","compid":"14091","compname":"宁安铁路有限责任公司","contact":"1333333333","departments":[{"duty":"宁安铁路有限责任公司","id":14091,"name":"宁安铁路有限责任公司"}],"idNo":"","name":"宁安铁路有限责任公司调度","relateAccount":"nagsgcbxm,cky","sex":"男","ssid":"APP-0f17e996-9525-441a-8d82-25b59344263f","userId":1553}]}
+     * data : {"list":[{"account":"shjnadd","compid":"14091","compname":"宁安铁路有限责任公司","contact":"1333333333","departments":[{"duty":"宁安铁路有限责任公司","id":14091,"name":"宁安铁路有限责任公司"}],"idNo":"","name":"宁安铁路有限责任公司调度","relateAccount":"nagsgcbxm,cky","sex":"男","ssid":"APP-ec1de907-93bb-472c-adbb-fd6e5ed0639f","switchers":[{"account":"nagsgcbxm","deptname":"京沈铁路客运专线辽宁有限责任公司-->工程管理部","username":"徐 敏"},{"account":"cky","deptname":"宁安铁路有限责任公司-->工程调度","username":"陈坤友"}],"userId":1553}]}
      * msg : 成功
      * status : 0
      */
@@ -66,7 +66,8 @@ public class RelateaAccountLoginBean {
              * name : 宁安铁路有限责任公司调度
              * relateAccount : nagsgcbxm,cky
              * sex : 男
-             * ssid : APP-0f17e996-9525-441a-8d82-25b59344263f
+             * ssid : APP-ec1de907-93bb-472c-adbb-fd6e5ed0639f
+             * switchers : [{"account":"nagsgcbxm","deptname":"京沈铁路客运专线辽宁有限责任公司-->工程管理部","username":"徐 敏"},{"account":"cky","deptname":"宁安铁路有限责任公司-->工程调度","username":"陈坤友"}]
              * userId : 1553
              */
 
@@ -81,6 +82,7 @@ public class RelateaAccountLoginBean {
             private String ssid;
             private int userId;
             private List<DepartmentsEntity> departments;
+            private List<SwitchersEntity> switchers;
 
             public String getAccount() {
                 return account;
@@ -170,6 +172,14 @@ public class RelateaAccountLoginBean {
                 this.departments = departments;
             }
 
+            public List<SwitchersEntity> getSwitchers() {
+                return switchers;
+            }
+
+            public void setSwitchers(List<SwitchersEntity> switchers) {
+                this.switchers = switchers;
+            }
+
             public static class DepartmentsEntity {
                 /**
                  * duty : 宁安铁路有限责任公司
@@ -203,6 +213,42 @@ public class RelateaAccountLoginBean {
 
                 public void setName(String name) {
                     this.name = name;
+                }
+            }
+
+            public static class SwitchersEntity {
+                /**
+                 * account : nagsgcbxm
+                 * deptname : 京沈铁路客运专线辽宁有限责任公司-->工程管理部
+                 * username : 徐 敏
+                 */
+
+                private String account;
+                private String deptname;
+                private String username;
+
+                public String getAccount() {
+                    return account;
+                }
+
+                public void setAccount(String account) {
+                    this.account = account;
+                }
+
+                public String getDeptname() {
+                    return deptname;
+                }
+
+                public void setDeptname(String deptname) {
+                    this.deptname = deptname;
+                }
+
+                public String getUsername() {
+                    return username;
+                }
+
+                public void setUsername(String username) {
+                    this.username = username;
                 }
             }
         }

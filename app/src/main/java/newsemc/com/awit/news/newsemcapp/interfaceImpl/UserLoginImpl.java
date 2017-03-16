@@ -19,6 +19,7 @@ import java.util.List;
 
 import newsemc.com.awit.news.newsemcapp.application.NewsEMCAppllication;
 import newsemc.com.awit.news.newsemcapp.bean.FailRequest;
+import newsemc.com.awit.news.newsemcapp.bean.RelateaAccountLoginBean;
 import newsemc.com.awit.news.newsemcapp.bean.UserLogin;
 import newsemc.com.awit.news.newsemcapp.dao.DepartmentInfo;
 import newsemc.com.awit.news.newsemcapp.dao.PersonInfo;
@@ -36,6 +37,7 @@ public class UserLoginImpl implements UserLoginInter {
     private UserLogin userLoginobj;
     private FailRequest failRequestobj;
     private HttpResultListener httpResultListener;
+
 
     public UserLoginImpl(HttpResultListener httpResultListener) {
         this.httpResultListener = httpResultListener;
@@ -94,7 +96,7 @@ public class UserLoginImpl implements UserLoginInter {
                             String s = jsonObject.optString("status");
                             KLog.e(TAG, s);
                             if (Integer.parseInt(s) < 0) {
-                                KLog.e(TAG,"loginFailed");
+                                KLog.e(TAG, "loginFailed");
                                 failRequestobj = new FailRequest();
                                 failRequestobj.setStatus(jsonObject.optString("status"));
                                 failRequestobj.setMsg(jsonObject.optString("msg"));
@@ -119,19 +121,20 @@ public class UserLoginImpl implements UserLoginInter {
                                     personInfobj.setCompname(jsonObject.optString("compname"));
                                     personInfobj.setIdNo(jsonObject.optString("idNo"));
                                     personInfobj.setCompid(jsonObject.optString("compid"));
-                                    JSONArray jsonArray=new JSONArray();
-                                    jsonArray=jsonObject.optJSONArray("relateAccount");
-                                    ArrayList<String> list=new ArrayList<String>();
+                                    JSONArray jsonArray = new JSONArray();
+                                    jsonArray = jsonObject.optJSONArray("switchers");
+//                                    jsonArray=jsonObject.optJSONArray("relateAccount");
+                                    Gson gson=new Gson();
+                                    ArrayList<RelateaAccountLoginBean.DataEntity.ListEntity.SwitchersEntity> list = new ArrayList<RelateaAccountLoginBean.DataEntity.ListEntity.SwitchersEntity>();
 
                                     if (jsonArray != null) {
-                                        for (int x=0;x<jsonArray.length();x++)
-                                        {
-                                            list.add((String) jsonArray.get(x));
+                                        for (int x = 0; x < jsonArray.length(); x++) {
+                                            list.add( gson.fromJson(jsonArray.get(x).toString(), RelateaAccountLoginBean.DataEntity.ListEntity.SwitchersEntity.class));
 
                                         }
                                     }
 
-                                    personInfobj.setAccountlist(list);
+                                    personInfobj.setSwitchers(list);
                                     userLoginobj.setPersonInfobj(personInfobj);
                                     JSONArray departarr = new JSONArray(jsonObject.optString("departments"));
                                     Log.i(TAG, "shaorc" + departarr);

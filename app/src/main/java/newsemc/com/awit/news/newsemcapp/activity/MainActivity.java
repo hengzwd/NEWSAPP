@@ -681,6 +681,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             @Override
             public void onItemClick(ZrcListView parent, View view, int position, long id) {
                 KLog.e("00000000000");
+                if (position-1>=0) {//放置数组越界
                 Intent intent = new Intent();
 //                intent.setClass(MainActivity.this, SingleNewActivity1.class);
                 intent.setClass(MainActivity.this, NewsDetailActivity.class);
@@ -688,6 +689,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 intent.putExtra("infotype", item_list.get(position - 1).getInfotype());
                 Page = item_list.get(position - 1).getPageno();
                 startActivityForResult(intent, 0);
+                }else {
+                    Toast.makeText(MainActivity.this, "没有数据可展示", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }

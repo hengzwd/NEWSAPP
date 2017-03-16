@@ -15,12 +15,15 @@ import com.nostra13.universalimageloader.utils.StorageUtils;
 import com.socks.library.KLog;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
+import newsemc.com.awit.news.newsemcapp.bean.RelateaAccountLoginBean;
 import newsemc.com.awit.news.newsemcapp.bean.UserLogin;
 import newsemc.com.awit.news.newsemcapp.dao.CompanyInfo;
 import newsemc.com.awit.news.newsemcapp.dao.DaoMaster;
 import newsemc.com.awit.news.newsemcapp.dao.DaoSession;
+import newsemc.com.awit.news.newsemcapp.dao.PersonInfo;
 import newsemc.com.awit.news.newsemcapp.dao.SpecialAccountInfo;
 import newsemc.com.awit.news.newsemcapp.scanmodule.bean.QRCodeBean;
 import newsemc.com.awit.news.newsemcapp.scanmodule.bean.phoneInfo;
@@ -49,6 +52,7 @@ public class NewsEMCAppllication extends Application {
     public static QRCodeBean mQRCodeBean;
     public static UserLogin mUserLogin;
     public static phoneInfo phoneInfo;
+    public   static List<RelateaAccountLoginBean.DataEntity.ListEntity.SwitchersEntity> switchers;
 
     @Override
     public void onCreate() {
@@ -57,7 +61,7 @@ public class NewsEMCAppllication extends Application {
         mRequestQueue = Volley.newRequestQueue(getApplicationContext());
         //获取扫描Token值
         mToken = (String) SharedPreferencesUtils.get(this, "scan_login_token", "");
-
+        switchers=new ArrayList<RelateaAccountLoginBean.DataEntity.ListEntity.SwitchersEntity>();
         phoneInfo=new phoneInfo();
         //Thread.setDefaultUncaughtExceptionHandler(AppExceptionHandler.getInstance(this));
         File cacheDir = StorageUtils.getOwnCacheDirectory(this, "emc/Cache");

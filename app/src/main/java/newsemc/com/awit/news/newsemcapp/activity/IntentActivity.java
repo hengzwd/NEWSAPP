@@ -406,6 +406,7 @@ public class IntentActivity extends FragmentActivity implements View.OnClickList
                         companyInfoList = (List<CompanyInfo>)obj;
                         if(companyInfoList.size()>0){
                             companyInfoService.saveCompanyInfoLists(companyInfoList);
+                            read.clear();
                             read.addAll(companyInfoList);
 //                            zrcListView.setAdapter(new WorkAdapter(IntentActivity.this, companyInfoList));
 //                            zrcListView.setOnItemClickListener(this);
